@@ -28,9 +28,9 @@ app.use(morgan('dev'));      // Log every request to the terminal (for debugging
 app.use(express.json());     // Parse JSON request bodies
 
 // 6. Routes — we'll add these one by one in Phase 3 & 4
-// app.use('/api/auth',      require('./routes/auth'));
-// app.use('/api/emergency', require('./routes/emergency'));
-// app.use('/api/admin',     require('./routes/admin'));
+app.use('/api/auth',      require('./routes/auth'));
+app.use('/api/emergency', require('./routes/emergency'));
+app.use('/api/admin',     require('./routes/admin'));
 
 // 7. Health check — visit http://localhost:5000/health to confirm it's running
 app.get('/health', (req, res) => res.json({ status: 'Server is running ✅' }));

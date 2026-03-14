@@ -1,0 +1,32 @@
+### Register a citizen user
+POST http://localhost:5000/api/auth/register
+Content-Type: application/json
+
+{
+  "name": "Manish Thakur",
+  "email": "manish@test.com",
+  "password": "test1234",
+  "role": "citizen",
+  "bloodGroup": "B+",
+  "age": 21
+}
+
+### Register a volunteer
+POST http://localhost:5000/api/auth/register
+Content-Type: application/json
+
+{
+  "name": "Arjun Mehta",
+  "email": "arjun@test.com",
+  "password": "test1234",
+  "role": "volunteer"
+}
+
+### Login
+POST http://localhost:5000/api/auth/login
+Content-Type: application/json
+
+{
+  "email": "manish@test.com",
+  "password": "test1234"
+}
